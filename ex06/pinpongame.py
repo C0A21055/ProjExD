@@ -188,7 +188,7 @@ def main():
         ball_x += ball_vx * time_sec
         ball_y += ball_vy * time_sec
 
-        # C0A21055 時間計測(50秒経ったら終了)
+        # C0A21055 時間計測(20秒経ったら終了)
         counter += 1
         if counter % 30 == 0:
             timer += 1
@@ -201,7 +201,7 @@ def main():
         text = font.render(f"Time: {int(timer)}", True, (255,0,0))
         screen.blit(text, (30, 20))
 
-        # C0A21055 どちらかの得点が3になったら終了
+        # C0A21055 どちらかの得点が2になったら終了
         if score1 == 2:
             score_text = score_font.render("WIN", True, (255,0,0))
             screen.blit(score_text, (250, 220))
